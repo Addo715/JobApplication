@@ -18,9 +18,19 @@ const NewNavbar = () => {
 
       {/* Desktop Menu */}
       <div className="hidden sm:flex items-center gap-8">
-        <a href="#">Job</a>
-        <a href="#">Dashboard</a>
-        <a href="#">Contact</a>
+         <Link to="/job" className="hover:text-black transition">
+                   Job
+                 </Link>
+
+
+         <Link to="/dashboard" className="hover:text-black transition">
+                   Dashboard
+                 </Link>
+
+
+         <Link to="/contact" className="hover:text-black transition">
+                   Contact Us
+                 </Link>
 
         {/* Search Input */}
         <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">

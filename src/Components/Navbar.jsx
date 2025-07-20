@@ -19,8 +19,8 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link className="hover:text-black transition">
-            Movies
+          <Link to="/contact" className="hover:text-black transition">
+            Contact Us
           </Link>
         </li>
       
@@ -63,7 +63,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link  className="text-sm">
-                Movies
+                Contact Us
               </Link>
             </li>
          
