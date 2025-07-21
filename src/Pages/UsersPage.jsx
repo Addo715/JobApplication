@@ -1,12 +1,12 @@
 import React from 'react'
 import NewNavbar from '../Components/NewNavbar'
-// import NewNavbar from '../Components/NewNavbar'
+import Jobs from '../Components/Jobs'
 
 const UsersPage = () => {
   return (
     <div>
         <NewNavbar/>
-    <h1>Users Page Content</h1>
+        <Jobs/>
     </div>
   )
 }

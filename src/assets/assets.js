@@ -1,4 +1,4 @@
-
+import { v4 as uuidv4 } from 'uuid';
 import search_icon from "./search_icon.svg";
 import company_icon from "./company_icon.svg";
 import microsoft_logo from "./microsoft_logo.svg";
@@ -101,11 +101,26 @@ export const JobLocations = [
 ]
 
 // Sample data for Manage Jobs Page
+
 export const manageJobsData = [
-    { _id: 1, title: "Full Stack Developer", date: 1729102298497, location: "Bangalore", applicants: 20 },
-    { _id: 2, title: "Data Scientist", date: 1729102298497, location: "San Francisco", applicants: 15 },
-    { _id: 3, title: "Marketing Manager", date: 1729102298497, location: "London", applicants: 2 },
-    { _id: 4, title: "UI/UX Designer", date: 1729102298497, location: "Dubai", applicants: 25 }
+  {
+    uuid: uuidv4(),
+    title: 'Frontend Developer',
+    description: 'You will be responsible for building responsive web interfaces using React and Tailwind CSS.',
+    image: '/images/frontend-dev.jpg',
+  },
+  {
+    uuid: uuidv4(),
+    title: 'Backend Engineer',
+    description: 'You will work on scalable APIs and server-side logic using Node.js and Express.',
+    image: '/images/backend-eng.jpg',
+  },
+  {
+    uuid: uuidv4(),
+    title: 'Full Stack Developer',
+    description: 'You will handle both frontend and backend development for our web applications.',
+    image: '/images/fullstack-dev.jpg',
+  },
 ];
 
 // Sample data for Profile Page
@@ -922,4 +937,50 @@ export const jobsData = [
         date: 1729681667114,
         category: "Programming",
     }
+    
 ];
+
+// export const Jobs=[
+//         {
+//             id: 1,
+//             image:"amazon_logo",
+//             Title:"Fullstack Developer",
+//             Description: " We are seeking a highly skilled Full Stack Developer to join our dynamic and innovative team. The ideal candidate will have a passion for developing scalable web applications and working across the entire technology stack, including front-end and back-end development. You will have the opportunity to work with the latest technologies and contribute to exciting projects that impact our users directly."     
+//         },
+//         {
+//             id: 2,
+//              image:"amazon_logo",
+//             Title:"Frontend Developer",
+//             Description: " We are seeking a highly skilled Full Stack Developer to join our dynamic and innovative team. The ideal candidate will have a passion for developing scalable web applications and working across the entire technology stack, including front-end and back-end development. You will have the opportunity to work with the latest technologies and contribute to exciting projects that impact our users directly."     
+//         },
+//         {
+//             id: 3,
+//              image:"amazon_logo",
+//             Title:"Backend Developer",
+//             Description: " We are seeking a highly skilled Full Stack Developer to join our dynamic and innovative team. The ideal candidate will have a passion for developing scalable web applications and working across the entire technology stack, including front-end and back-end development. You will have the opportunity to work with the latest technologies and contribute to exciting projects that impact our users directly."     
+//         },
+//         {
+//             id: 4,
+//              image:"amazon_logo",
+//             Title:"AI/ML Developer",
+//             Description: " We are seeking a highly skilled Full Stack Developer to join our dynamic and innovative team. The ideal candidate will have a passion for developing scalable web applications and working across the entire technology stack, including front-end and back-end development. You will have the opportunity to work with the latest technologies and contribute to exciting projects that impact our users directly."     
+//         },
+//         {
+//             id: 1,
+//              image:"amazon_logo",
+//             Title:"Product Manger",
+//             Description: " We are seeking a highly skilled Full Stack Developer to join our dynamic and innovative team. The ideal candidate will have a passion for developing scalable web applications and working across the entire technology stack, including front-end and back-end development. You will have the opportunity to work with the latest technologies and contribute to exciting projects that impact our users directly."     
+//         },
+//         {
+//             id: 5,
+//              image:"amazon_logo",
+//             Title:" Software engineer",
+//             Description: " We are seeking a highly skilled Full Stack Developer to join our dynamic and innovative team. The ideal candidate will have a passion for developing scalable web applications and working across the entire technology stack, including front-end and back-end development. You will have the opportunity to work with the latest technologies and contribute to exciting projects that impact our users directly."     
+//         },
+//         {
+//             id: 6,
+//              image:"amazon_logo",
+//             Title:"Fullstack Developer",
+//             Description: " We are seeking a highly skilled Full Stack Developer to join our dynamic and innovative team. The ideal candidate will have a passion for developing scalable web applications and working across the entire technology stack, including front-end and back-end development. You will have the opportunity to work with the latest technologies and contribute to exciting projects that impact our users directly."     
+//         },
+// ]
