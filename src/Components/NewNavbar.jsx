@@ -69,9 +69,11 @@ const NewNavbar = () => {
             3
           </button>
         </div>
+        <Link to='/signup'>
         <button className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full">
-          Login
+          Logout
         </button>
+        </Link>
       </div>
       <button
         onClick={() => setOpen(!open)}
