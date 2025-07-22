@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { assets, jobsData, manageJobsData } from '../assets/assets';
+import Footer from './Footer';
+
 
 const Jobs = () => {
   const navigate = useNavigate();
@@ -34,6 +36,8 @@ const Jobs = () => {
           );
         })}
       </div>
+<Footer />
+     
     </div>
   );
 };
