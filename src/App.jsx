@@ -12,10 +12,9 @@ const App = () => {
   return (
     <div >
        {/* Show Navbar only on homepage and newNavbar*/}
-      {/* {location.pathname === "/" && <Navbar />} */}
-      {/* {location.pathname === '/userpage' && <NewNavbar/>} */}
-      <NewNavbar />
-
+      {location.pathname === "/" && <Navbar />}
+      {location.pathname === '/userpage' && <NewNavbar/>}
+    
       <Routes>
      
   <Route path='/' element={<Home />} />
