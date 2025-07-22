@@ -63,7 +63,7 @@ const ContactUs = () => {
         </form>
 
       </div>
-   <Footer />
+   {/* <Footer /> */}
     </div>
   );
 };
