@@ -1,38 +1,25 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { assets } from "../assets/assets";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { assets } from '../assets/assets';
 
 const NewNavbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 border-b border-gray-300 bg-white relative">
-      {/* Logo */}
       <Link to="/">
-        <img
-          className="h-[6.5rem]"
-          src={assets.logo1}
-          alt="Company Logo"
-        />
+        <img className="h-[6.5rem]" src={assets.logo1} alt="Company Logo" />
       </Link>
-
-      {/* Desktop Menu */}
       <div className="hidden sm:flex items-center gap-8">
-         <Link to="/job" className="hover:text-black transition">
-                   Job
-                 </Link>
-
-
-         <Link to="/dashboard" className="hover:text-black transition">
-                   Dashboard
-                 </Link>
-
-
-         <Link to="/contact" className="hover:text-black transition">
-                   Contact Us
-                 </Link>
-
-        {/* Search Input */}
+        <Link to="/user" className="hover:text-black transition">
+          Job
+        </Link>
+        <Link to="/dashboard" className="hover:text-black transition">
+          Dashboard
+        </Link>
+        <Link to="/contactus" className="hover:text-black transition">
+          Contact Us
+        </Link>
         <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
           <input
             className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500"
@@ -63,8 +50,6 @@ const NewNavbar = () => {
             />
           </svg>
         </div>
-
-        {/* Notification Bell */}
         <div className="relative cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -84,14 +69,12 @@ const NewNavbar = () => {
             3
           </button>
         </div>
-
-        {/* Login Button */}
+        <Link to='/signup'>
         <button className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full">
-          Login
+          Logout
         </button>
+        </Link>
       </div>
-
-      {/* Mobile Menu Toggle Button */}
       <button
         onClick={() => setOpen(!open)}
         aria-label="Toggle Menu"
@@ -109,16 +92,20 @@ const NewNavbar = () => {
           <rect x="6" y="13" width="15" height="1.5" rx=".75" fill="#426287" />
         </svg>
       </button>
-
-      {/* Mobile Dropdown Menu */}
       <div
         className={`${
-          open ? "flex" : "hidden"
+          open ? 'flex' : 'hidden'
         } absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}
       >
-        <a href="#" className="block">Job</a>
-        <a href="#" className="block">Dashboard</a>
-        <a href="#" className="block">Contact</a>
+        <Link to="/user" className="block">
+          Job
+        </Link>
+        <Link to="/dashboard" className="block">
+          Dashboard
+        </Link>
+        <Link to="/contactus" className="block">
+          Contact
+        </Link>
       </div>
     </nav>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import { CiCalendar, CiClock1 } from "react-icons/ci";
 import { FaArrowRight } from "react-icons/fa6";
 import { assets } from "../assets/assets";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -38,11 +39,13 @@ const Hero = () => {
               Join thousands of job seekers accelerating their careers with our platform.
             </p>
 
+           <Link to='/signup'>
             <div className="mt-4">
               <button className="flex items-center gap-2 bg-white text-blue-600 font-semibold border border-blue-600 px-4 py-2 rounded-full hover:bg-red-50 transition cursor-pointer">
                 Browse Jobs <FaArrowRight />
               </button>
             </div>
+            </Link>
           </div>
         </div>
       </div>

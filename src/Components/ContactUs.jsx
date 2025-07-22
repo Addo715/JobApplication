@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4 py-10">
+  <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-start px-4 pt-6 pb-6">
       <div className="max-w-4xl w-full bg-white rounded-xl shadow-lg p-8 grid md:grid-cols-2 gap-10">
         
         {/* Left Side - Contact Info */}

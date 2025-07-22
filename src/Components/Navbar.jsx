@@ -12,7 +12,7 @@ const Navbar = () => {
         <img className="w-[10rem] " src={assets.logo1} alt="dummyLogoColored" />
       </Link>
 
-      <ul className="md:flex hidden items-center gap-10 text-black">
+      {/* <ul className="md:flex hidden items-center gap-10 text-black">
         <li>
           <Link  className="hover:text-black transition">
             Home
@@ -24,17 +24,19 @@ const Navbar = () => {
           </Link>
         </li>
       
-      </ul>
+      </ul> */}
 
+       <Link to= "/signup">
       <button
         type="button"
         className="bg-white text-gray-600 border border-gray-300 md:inline hidden text-sm hover:bg-gray-50 active:scale-95 transition-all w-40 h-11 rounded-full cursor-pointer"
-        onClick={() => {
-          logout();
-        }}
+        // onClick={() => {
+        //   logout();
+        // }}
       >
-        LogOut
+        Get Started
       </button>
+      </Link>
 
       <button
         aria-label="menu-btn"
@@ -55,7 +57,7 @@ const Navbar = () => {
 
       {menuOpen && (
         <div className="mobile-menu absolute top-[70px] left-0 w-full bg-white p-6 md:hidden">
-          <ul className="flex flex-col space-y-4 text-lg">
+          {/* <ul className="flex flex-col space-y-4 text-lg">
             <li>
               <Link className="text-sm">
                 Home
@@ -67,8 +69,9 @@ const Navbar = () => {
               </Link>
             </li>
          
-          </ul>
+          </ul> */}
 
+          <Link to='/signup'>
           <button
             type="button"
             className="bg-white text-gray-600 border border-gray-300 mt-6 text-sm hover:bg-gray-50 active:scale-95 transition-all w-40 h-11 rounded-full cursor-pointer"
@@ -76,8 +79,9 @@ const Navbar = () => {
               logout();
             }}
           >
-            LogOut
+            Get Started
           </button>
+          </Link>
         </div>
       )}
     </nav>
