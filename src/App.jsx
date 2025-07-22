@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import Navbar from "./Components/Navbar";
+import NewNavbar from "./Components/NewNavbar";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Home from "./Pages/Home";
-import Footer from "./Components/Footer";
+import Footer from "./Components/Dashboard";
 import UsersPage from "./Pages/Userspage";
 import ContactUs from "./Pages/ContactUsContent";
 import JobDetail from "./Pages/JobDetail";
@@ -34,9 +35,9 @@ const App = () => {
   return (
     <div >
        {/* Show Navbar only on homepage and newNavbar*/}
-      {/* {location.pathname === "/" && <Navbar />} */}
-      {/* {location.pathname === '/userpage' && <NewNavbar/>} */}
-      <NewNavbar />
+      {location.pathname === "/" && <Navbar />} 
+       {location.pathname === '/userpage' && <NewNavbar/>}
+  
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -49,6 +50,8 @@ const App = () => {
         <Route path="/adminlogin" element={<AdimLogin />} />
         <Route path="/admin-dashboard" element={<AdminDashboard/>}/>
       </Routes>
+
+  
 
       {/* Hide Footer on specific routes */}
       {!hideFooterRoutes.includes(location.pathname) && <Footer />}
