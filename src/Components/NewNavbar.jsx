@@ -24,7 +24,7 @@ const NewNavbar = () => {
           <input
             className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500"
             type="text"
-            placeholder="Search products"
+            placeholder="Search Job"
           />
           <svg
             width="16"
@@ -65,12 +65,12 @@ const NewNavbar = () => {
               d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C8.67 6.165 8 7.388 8 9v5.159c0 .538-.214 1.055-.595 1.436L6 17h5m0 0v1a3 3 0 006 0v-1m-6 0H9"
             />
           </svg>
-          <button className="absolute -top-2 -right-3 text-xs text-white bg-indigo-500 w-[18px] h-[18px] rounded-full">
+          <button className="absolute -top-2 -right-3 text-xs text-white bg-sky-700 w-[18px] h-[18px] rounded-full">
             3
           </button>
         </div>
         <Link to='/'>
-        <button className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full">
+        <button className="cursor-pointer px-8 py-2 bg-sky-700 hover:bg-sky-400 transition text-white rounded-full">
           Logout
         </button>
         </Link>

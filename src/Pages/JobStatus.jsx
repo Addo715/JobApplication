@@ -88,7 +88,7 @@ const JobStatus = () => {
           </p>
           <label
             htmlFor="fileInput"
-            className="border-2 border-dotted border-gray-400 p-8 mt-6 flex flex-col items-center gap-4 cursor-pointer hover:border-blue-500 transition"
+            className="border-2 border-dotted border-gray-400 p-8 mt-6 flex flex-col items-center gap-4 cursor-pointer hover:border-sky-500 transition"
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
@@ -110,7 +110,7 @@ const JobStatus = () => {
             </svg>
             <p className="text-gray-500">Drag files here to upload</p>
             <p className="text-gray-400">
-              Or <span className="text-blue-500 underline">click here</span> to
+              Or <span className="text-sky-500 underline">click here</span> to
               select a file
             </p>
             <input
@@ -144,7 +144,7 @@ const JobStatus = () => {
             </button>
             <button
               type="button"
-              className="px-6 py-2 bg-indigo-500 hover:bg-indigo-600 active:scale-95 transition-all text-white rounded"
+              className="px-6 py-2 bg-sky-500 hover:bg-sky-600 active:scale-95 transition-all text-white rounded"
               onClick={handleUpload}
             >
               Upload File

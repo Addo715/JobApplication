@@ -160,7 +160,7 @@ const UserLogin = () => {
 
           <button
             type="submit"
-            className="mt-8 w-full h-11 rounded-full text-white bg-indigo-500 hover:opacity-90 transition-opacity"
+            className="mt-8 w-full h-11 rounded-full text-white bg-sky-500 hover:opacity-90 transition-opacity"
           >
             {signup}
           </button>
@@ -181,7 +181,7 @@ const UserLogin = () => {
                 Already have an account? {""}
                 <a
                   onClick={() => setSignUp("Sign Up")}
-                  className="text-indigo-400 hover:underline"
+                  className="text-sky-400 hover:underline"
                   href="#"
                 >
                   Sign Up

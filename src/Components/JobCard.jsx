@@ -18,16 +18,16 @@ const JobCard = ({ job, onEdit, showControls = true }) => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 border border-blue-500 rounded-lg shadow-md bg-white space-y-4">
+    <div className="max-w-4xl mx-auto p-6 border border-sky-500 rounded-lg shadow-md bg-white space-y-4">
       {/* Top Section with Logo and Job Title */}
       <div className="flex items-center gap-4">
         <img
-          src={job.companyLogo || "/3c8b1073-a325-427f-88fd-be162bbdef0c.png"}
+          src={job.companyLogo || "/samsung_logo.png"}
           alt="Company Logo"
           className="w-14 h-14 rounded-md object-cover"
         />
         <div>
-          <h2 className="text-2xl font-semibold text-blue-600">{job.jobTitle}</h2>
+          <h2 className="text-2xl font-semibold text-sky-600">{job.jobTitle}</h2>
           <p className="text-gray-500">{job.jobCategory}</p>
         </div>
       </div>
@@ -48,7 +48,7 @@ const JobCard = ({ job, onEdit, showControls = true }) => {
         <div className="flex gap-4 mt-4">
           <button
             onClick={handleEdit}
-            className="flex items-center gap-2 px-4 py-2 text-sm text-white bg-blue-600 rounded hover:bg-blue-700"
+            className="flex items-center gap-2 px-4 py-2 text-sm text-white bg-sky-600 rounded hover:bg-sky-700"
           >
             <Edit className="w-4 h-4" /> Edit
           </button>

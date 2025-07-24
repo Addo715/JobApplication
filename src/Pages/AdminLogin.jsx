@@ -99,7 +99,7 @@ const AdminLogin = () => {
 
         <button
           type="submit"
-          className="mt-6 w-full h-11 rounded-full text-white bg-indigo-500 hover:opacity-90 transition-opacity disabled:bg-indigo-300"
+          className="mt-6 w-full h-11 rounded-full text-white bg-sky-500 hover:opacity-90 transition-opacity disabled:bg-sky-300"
           disabled={loading}
         >
           {loading ? 'Processing...' : 'Login'}

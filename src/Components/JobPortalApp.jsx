@@ -30,7 +30,7 @@ const JobPortalApp = () => {
       }}
       className={`flex items-center gap-2 px-5 py-2 rounded-xl font-medium transition-colors whitespace-nowrap shadow-sm ${
         activeTab === tabKey
-          ? 'bg-blue-100 text-blue-700'
+          ? 'bg-blue-100 text-sky-700'
           : 'text-gray-600 hover:bg-gray-100'
       }`}
     >
@@ -42,7 +42,7 @@ const JobPortalApp = () => {
     <nav className="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow z-50">
       <div className="max-w-7xl mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center cursor-pointer">
+          <div className="w-10 h-10 bg-sky-600 rounded-lg flex items-center justify-center cursor-pointer">
             <PiBridgeBold className="w-5 h-5 text-white" />
           </div>
           <span className="text-2xl font-bold text-gray-900">JobBridge</span>
@@ -130,7 +130,7 @@ const JobPortalApp = () => {
       jobTitle: '',
       jobDescription: '',
       jobCategory: 'Programming',
-      jobLocation: 'Bangalore',
+      jobLocation: 'Accra',
       jobLevel: 'Senior Level',
       salary: '',
       companyLogo: null
@@ -145,7 +145,7 @@ const JobPortalApp = () => {
       jobTitle: '',
       jobDescription: '',
       jobCategory: 'Programming',
-      jobLocation: 'Bangalore',
+      jobLocation: 'Accra',
       jobLevel: 'Senior Level',
       salary: '',
       companyLogo: null
@@ -212,7 +212,7 @@ const JobPortalApp = () => {
               value={formData.jobTitle}
               onChange={handleInputChange}
               placeholder="Type here"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-all"
               required
             />
           </div>
@@ -226,7 +226,7 @@ const JobPortalApp = () => {
               onChange={handleInputChange}
               placeholder="Type here"
               rows={4}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-all resize-none"
               required
             />
           </div>
@@ -240,7 +240,7 @@ const JobPortalApp = () => {
                 name="jobCategory"
                 value={formData.jobCategory}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none bg-white"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none bg-white"
               >
                 <option value="Programming">Programming</option>
                 <option value="Design">Design</option>
@@ -258,14 +258,14 @@ const JobPortalApp = () => {
                 name="jobLocation"
                 value={formData.jobLocation}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none bg-white"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none bg-white"
               >
-                <option value="Bangalore">Bangalore</option>
-                <option value="Mumbai">Mumbai</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Hyderabad">Hyderabad</option>
-                <option value="Chennai">Chennai</option>
-                <option value="Pune">Pune</option>
+                <option value="Bangalore">Accra</option>
+                <option value="Mumbai">Tema</option>
+                <option value="Delhi">Koforidua</option>
+                <option value="Hyderabad">Kumasi</option>
+                <option value="Chennai">Tarkoradi</option>
+                <option value="Pune">Tamale</option>
                 <option value="Remote">Remote</option>
               </select>
             </div>
@@ -277,7 +277,7 @@ const JobPortalApp = () => {
                 name="jobLevel"
                 value={formData.jobLevel}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none bg-white"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none bg-white"
               >
                 <option value="Entry Level">Entry Level</option>
                 <option value="Mid Level">Mid Level</option>
@@ -297,7 +297,7 @@ const JobPortalApp = () => {
               value={formData.salary}
               onChange={handleInputChange}
               placeholder="0"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none"
               required
             />
           </div>
@@ -329,7 +329,7 @@ const JobPortalApp = () => {
       <p className="text-gray-600">Post new job opportunities with detailed descriptions and requirements to attract top talent.</p>
       <button
         onClick={() => setShowJobForm(true)}
-        className="mt-4 flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+        className="mt-4 flex items-center gap-2 px-6 py-3 bg-sky-600 text-white rounded-lg font-medium hover:bg-sky-700 transition-colors"
       >
         <Plus className="w-5 h-5" />
         Add New Job

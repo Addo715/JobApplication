@@ -65,7 +65,7 @@ const Dashboard = () => {
       <NewNavbar />
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-8 border-b-4 border-blue-500 inline-block pb-2">
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-8 border-b-4 border-sky-600 inline-block pb-2">
           Jobs Applied
         </h1>
 

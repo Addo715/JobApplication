@@ -22,10 +22,10 @@ const Hero = () => {
           </h1>
 
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-300">
-            <p className="border-r border-blue-500 pr-4">Remote</p>
-            <p className="border-r border-blue-500 pr-4">Full-time</p>
-            <p className="border-r border-blue-500 pr-4">Part-time</p>
-            <p className="flex items-center gap-1 border-r border-blue-500 pr-4">
+            <p className="border-r border-sky-500 pr-4">Remote</p>
+            <p className="border-r border-sky-500 pr-4">Full-time</p>
+            <p className="border-r border-sky-500 pr-4">Part-time</p>
+            <p className="flex items-center gap-1 border-r border-sky-500 pr-4">
             <CiCalendar />  Updated Daily 
             </p>
             <p className="flex items-center gap-1">
@@ -41,7 +41,7 @@ const Hero = () => {
 
            <Link to='/signup'>
             <div className="mt-4">
-              <button className="flex items-center gap-2 bg-white text-blue-600 font-semibold border border-blue-600 px-4 py-2 rounded-full hover:bg-red-50 transition cursor-pointer">
+              <button className="flex items-center gap-2 bg-white text-sky-600 font-semibold border border-sky-600 px-4 py-2 rounded-full hover:bg-red-50 transition cursor-pointer">
                 Browse Jobs <FaArrowRight />
               </button>
             </div>

@@ -27,14 +27,14 @@ const AdimUserLoginPage = () => {
         <div className="flex flex-col gap-4">
           <button
             onClick={handleAdminLogin}
-            className="w-full py-3 text-white bg-indigo-500 hover:bg-indigo-600 rounded-lg text-base font-medium transition"
+            className="w-full py-3 text-white bg-sky-500 hover:bg-sky-600 rounded-lg text-base font-medium transition"
           >
             Login as Admin
           </button>
 
           <button
             onClick={handleUserLogin}
-            className="w-full py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-base font-medium transition"
+            className="w-full py-3 text-white bg-sky-600 hover:bg-sky-700 rounded-lg text-base font-medium transition"
           >
             Login as User
           </button>

@@ -25,27 +25,27 @@ const ConsultingLandingPage = () => {
           {/* Left Side - Content */}
           <div className="order-2 lg:order-1">
             <div className="mb-6">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-sky-800">
+                <div className="w-2 h-2 bg-sky-400 rounded-full mr-2"></div>
                 WHY CHOOSE US
               </span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
-              Join <span className="text-blue-600">500+</span><br />
+              Join <span className="text-sky-600">500+</span><br />
               companies<br />
               trusting us
             </h1>
             
             <button className="inline-flex items-center px-6 py-3 border-2 border-blue-400 text-gray-900 font-semibold rounded-lg hover:bg-blue-50 transition-colors group">
               Get Started
-              <ArrowUpRight className="ml-2 h-5 w-5 text-blue-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <ArrowUpRight className="ml-2 h-5 w-5 text-sky-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </button>
           </div>
 
           {/* Right Side - Form */}
           <div className="order-1 lg:order-2">
-            <div className="bg-blue-800 rounded-2xl p-6 sm:p-8">
+            <div className="bg-sky-800 rounded-2xl p-6 sm:p-8">
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
                 Get Free Consulting
               </h2>

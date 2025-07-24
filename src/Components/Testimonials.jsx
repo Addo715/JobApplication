@@ -91,7 +91,7 @@ const Testimonials = () => {
     <div className="py-16 bg-gray-50">
       {/* Heading Section */}
       <div className="text-center p-5">
-        <h1 className="text-blue-600 text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
+        <h1 className="text-sky-500 text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
           Customer Testimonials
         </h1>
         <p className="text-gray-600 text-center max-w-md mx-auto mt-2">
@@ -131,7 +131,7 @@ const Testimonials = () => {
 
             {/* Author */}
             <div className="border-t pt-4">
-              <h4 className="font-semibold text-blue-500 text-lg">
+              <h4 className="font-semibold text-sky-700 text-lg">
                 {testimonial.name}
               </h4>
               <p className="text-gray-600 text-sm mt-1">{testimonial.job}</p>

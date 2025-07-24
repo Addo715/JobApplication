@@ -10,7 +10,7 @@ import JobDetail from "./Pages/JobDetail";
 import JobStatus from "./Pages/JobStatus";
 import AdimUserLoginPage from "./Pages/AdimUserLoginPage";
 import UserLogin from "./Pages/UserLogin";
-import AdimLogin from "./Pages/AdimLogin";
+import AdimLogin from "./Pages/AdminLogin";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from './Firebase';
 import AdminDashboard from "./Pages/AdminDashboard";
