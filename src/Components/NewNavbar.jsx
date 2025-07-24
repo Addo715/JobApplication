@@ -69,7 +69,7 @@ const NewNavbar = () => {
             3
           </button>
         </div>
-        <Link to='/signup'>
+        <Link to='/'>
         <button className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full">
           Logout
         </button>

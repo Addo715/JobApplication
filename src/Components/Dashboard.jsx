@@ -1,20 +1,13 @@
 import React from "react";
-import {
-  FileText,
-  Pencil,
-} from "lucide-react";
+import { CheckCircle, Clock, XCircle } from "lucide-react";
 import NewNavbar from "./NewNavbar";
-// import Navbar from "./Navbar";
 import Footer from "./Footer";
-
-
-
 
 const jobs = [
   {
     company: "Codetrain",
     title: "Full Stack Developer",
-    location: "East legon",
+    location: "East Legon",
     date: "22 Aug, 2024",
     status: "Pending",
   },
@@ -48,67 +41,76 @@ const jobs = [
   },
 ];
 
-const statusColors = {
-  Accepted: "bg-green-100 text-green-700",
-  Pending: "bg-yellow-100 text-yellow-700",
-  Rejected: "bg-red-100 text-red-700",
+const statusStyles = {
+  Accepted: {
+    color: "text-green-700",
+    bg: "bg-green-100",
+    icon: <CheckCircle size={16} className="mr-1" />,
+  },
+  Pending: {
+    color: "text-yellow-700",
+    bg: "bg-yellow-100",
+    icon: <Clock size={16} className="mr-1" />,
+  },
+  Rejected: {
+    color: "text-red-700",
+    bg: "bg-red-100",
+    icon: <XCircle size={16} className="mr-1" />,
+  },
 };
 
 const Dashboard = () => {
   return (
-    <div>
-    <NewNavbar /> 
+    <div className="min-h-screen bg-gray-50">
+      <NewNavbar />
 
-    <div>
-    <div className="p-6 max-w-5xl mx-auto bg-white shadow rounded-lg mt-10">
-      {/* <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800">Your Resume</h2>
-        <div className="flex gap-2">
-          <button className="flex items-center gap-1 px-4 py-2 bg-blue-100 text-blue-700 rounded hover:bg-blue-200">
-            <FileText size={16} /> Resume
-          </button>
-          <button className="flex items-center gap-1 px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
-            <Pencil size={16} /> Edit
-          </button>
-        </div>
-      </div> */}
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-8 border-b-4 border-blue-500 inline-block pb-2">
+          Jobs Applied
+        </h1>
 
-      <h3 className="text-lg font-medium text-gray-700 mb-4">Jobs Applied</h3>
-
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-200">
-          <thead className="bg-gray-50 text-left text-sm font-semibold text-gray-700">
-            <tr>
-              <th className="px-4 py-3 border-b">Company</th>
-              <th className="px-4 py-3 border-b">Job Title</th>
-              <th className="px-4 py-3 border-b">Location</th>
-              <th className="px-4 py-3 border-b">Date</th>
-              <th className="px-4 py-3 border-b">Action</th>
-            </tr>
-          </thead>
-          <tbody className="text-sm text-gray-600">
-            {jobs.map((job, idx) => (
-              <tr key={idx} className="hover:bg-gray-50">
-                <td className="px-4 py-3 border-b font-medium">{job.company}</td>
-                <td className="px-4 py-3 border-b">{job.title}</td>
-                <td className="px-4 py-3 border-b">{job.location}</td>
-                <td className="px-4 py-3 border-b">{job.date}</td>
-                <td className="px-4 py-3 border-b">
-                  <span
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${statusColors[job.status]}`}
-                  >
-                    {job.status}
-                  </span>
-                </td>
+        <div className="overflow-x-auto bg-white rounded-xl shadow-md">
+          <table className="min-w-full divide-y divide-gray-200 text-sm">
+            <thead className="bg-gray-100 text-gray-700 uppercase tracking-wider text-xs">
+              <tr>
+                <th className="px-6 py-4 text-left">Company</th>
+                <th className="px-6 py-4 text-left">Job Title</th>
+                <th className="px-6 py-4 text-left">Location</th>
+                <th className="px-6 py-4 text-left">Date</th>
+                <th className="px-6 py-4 text-left">Status</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-    </div>
-    <Footer />
+            </thead>
+            <tbody className="bg-white divide-y divide-gray-200">
+              {jobs.map((job, idx) => {
+                const style = statusStyles[job.status];
+                return (
+                  <tr
+                    key={idx}
+                    className="hover:bg-gray-50 transition-colors duration-150"
+                  >
+                    <td className="px-6 py-4 font-medium text-gray-800">
+                      {job.company}
+                    </td>
+                    <td className="px-6 py-4 text-gray-700">{job.title}</td>
+                    <td className="px-6 py-4 text-gray-700">{job.location}</td>
+                    <td className="px-6 py-4 text-gray-500">{job.date}</td>
+                    <td className="px-6 py-4">
+                      <span
+                        className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${style.bg} ${style.color}`}
+                      >
+                        {style.icon}
+                        {job.status}
+                      </span>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </main>
 
+      {/* <Footer /> */}
     </div>
   );
 };

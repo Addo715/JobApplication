@@ -1,12 +1,10 @@
 import React from "react";
 import Footer from "./Footer";
 
-
 const ContactUs = () => {
   return (
-  <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-start px-4 pt-6 pb-6">
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-start px-4 pt-6 pb-6">
       <div className="max-w-4xl w-full bg-white rounded-xl shadow-lg p-8 grid md:grid-cols-2 gap-10">
-        
         {/* Left Side - Contact Info */}
         <div>
           <h2 className="text-3xl font-bold text-blue-600 mb-4">Get in Touch</h2>
@@ -61,9 +59,8 @@ const ContactUs = () => {
             Send Message
           </button>
         </form>
-
       </div>
-   {/* <Footer /> */}
+      {/* <Footer /> */}
     </div>
   );
 };
