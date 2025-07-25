@@ -2,23 +2,25 @@ import React, { useState } from 'react';
 import { Plus, Users, Briefcase, Eye, Edit, Trash2, MapPin, Calendar, X, Upload, Image } from 'lucide-react';
 import { PiBridgeBold } from "react-icons/pi";
 import JobCard from './JobCard';
-import { useJobStore } from '../Store/useJobStore'; // ✅ Zustand store
+import { useJobStore } from '../Store/useJobStore'; // 
+import JobApplicantsTable from './JobApplicantsTable';
+import { Link } from 'react-router-dom';
 
 const JobPortalApp = () => {
   const [activeTab, setActiveTab] = useState('add');
   const [showJobForm, setShowJobForm] = useState(false);
-  const [editingJob, setEditingJob] = useState(null); // ✅ Add this state
+  const [editingJob, setEditingJob] = useState(null); 
   const [formData, setFormData] = useState({
     jobTitle: '',
     jobDescription: '',
     jobCategory: 'Programming',
-    jobLocation: 'Bangalore',
+    jobLocation: 'Canada',
     jobLevel: 'Senior Level',
     salary: '',
     companyLogo: null
   });
 
-  const { addJob, updateJob, jobs } = useJobStore(); // ✅ Add updateJob
+  const { addJob, updateJob, jobs } = useJobStore(); // 
 
   const TabButton = ({ label, icon: Icon, tabKey }) => (
     <button
@@ -41,12 +43,14 @@ const JobPortalApp = () => {
   const Navbar = () => (
     <nav className="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow z-50">
       <div className="max-w-7xl mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-4">
+        <Link to="/user">
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center cursor-pointer">
             <PiBridgeBold className="w-5 h-5 text-white" />
           </div>
           <span className="text-2xl font-bold text-gray-900">JobBridge</span>
         </div>
+        </Link>
         <div className="flex flex-wrap gap-3">
           <TabButton label="Add Jobs" icon={Plus} tabKey="add" />
           <TabButton label="View Applications" icon={Users} tabKey="applications" />
@@ -86,7 +90,7 @@ const JobPortalApp = () => {
     }
   };
 
-  // ✅ Enhanced handleEdit function
+  //  Enhanced handleEdit function
   const handleEdit = (job) => {
     setEditingJob(job);
     setFormData({
@@ -101,7 +105,7 @@ const JobPortalApp = () => {
     setShowJobForm(true);
   };
 
-  // ✅ Enhanced handleSubmit to handle both add and update
+  //  Enhanced handleSubmit to handle both add and update
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -137,7 +141,7 @@ const JobPortalApp = () => {
     });
   };
 
-  // ✅ Enhanced cancel handler
+  //  Enhanced cancel handler
   const handleCancel = () => {
     setShowJobForm(false);
     setEditingJob(null);
@@ -260,12 +264,12 @@ const JobPortalApp = () => {
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none bg-white"
               >
-                <option value="Bangalore">Bangalore</option>
-                <option value="Mumbai">Mumbai</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Hyderabad">Hyderabad</option>
-                <option value="Chennai">Chennai</option>
-                <option value="Pune">Pune</option>
+                <option value="Canada">Canada</option>
+                <option value="Ghana">Ghana</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Germany">Germany</option>
+                <option value="Spain">Spain</option>
+                <option value="USA">USA</option>
                 <option value="Remote">Remote</option>
               </select>
             </div>
@@ -345,6 +349,8 @@ const JobPortalApp = () => {
     <Section>
       <h2 className="text-2xl font-semibold text-gray-800">View Applications</h2>
       <p className="text-gray-600">Browse and manage applications submitted for various job listings.</p>
+
+      <JobApplicantsTable/>
     </Section>
   );
 

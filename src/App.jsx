@@ -4,7 +4,7 @@ import NewNavbar from "./Components/NewNavbar";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Home from "./Pages/Home";
 import Footer from "./Components/Footer";
-import UsersPage from "./Pages/Userspage";
+import UsersPage from "./Pages/UsersPage";
 import ContactUs from "./Pages/ContactUsContent";
 import JobDetail from "./Pages/JobDetail";
 import JobStatus from "./Pages/JobStatus";
