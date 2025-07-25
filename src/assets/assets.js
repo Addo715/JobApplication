@@ -35,7 +35,7 @@ import adobe_logo from './adobe_logo.png'
 import amazon_logo from './amazon_logo.png'
 import logo from './newlogo.png'
 import logo1 from './newlogo2.png'
-import background from './backgroundImage.jpg'
+import background from './BackgroundImage.jpg'
 import about from './AboutUs.jpg'
 
 
